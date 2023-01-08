@@ -1,0 +1,23 @@
+{
+  "name": "individual-project-dh",
+  "version": "1.0.0",
+  "description": "Proyecto individual de curso fullstack Digital House",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danif70/individual-project-DH.git"
+  },
+  "author": "Daniela Funes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danif70/individual-project-DH/issues"
+  },
+  "homepage": "https://github.com/danif70/individual-project-DH#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  }
+}

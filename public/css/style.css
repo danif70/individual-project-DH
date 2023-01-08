@@ -1,0 +1,207 @@
+/* Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a; 
+Navegación en tablets (ancho mínimo 361 px)
+● Navegación en desktop (ancho mínimo 769 px)*/
+
+
+
+body {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+
+}
+
+header {
+  background-color: #EAC926;
+  padding-bottom: 20px;
+}
+.header-first {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.header-second {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+.login {
+  display: none;
+}
+.nav-bar {
+  display: none;
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ebebeb;
+  margin: auto;
+  width: 65%;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.image {
+  width: 95%;
+  margin-top: 20px;
+}
+
+
+.article-texts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: left;
+  background-color: white;
+  width: 95%;
+  margin: 1px 0 20px;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+.titles {
+  font-size: 24px;
+  text-align: center;
+}
+
+.precio {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.discount {
+  color: #39b54a;
+}
+
+.desc-descrip {
+  font-size: 16px;
+  margin: 5px 0;
+}
+.descrip {
+  display: none;
+}
+.texts {
+  font-size: 12px;
+}
+
+.list-header {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.subtitle-header {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  gap:4px;
+}
+
+.header-menu {
+  background-color: #1259c3;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  display: block;
+  margin-inline: auto;
+  padding: 20px;
+  text-align: center;
+  width: max-content;
+  height: max-content;
+}
+
+.footer-information {
+  text-align: center;
+}
+
+.blue-icon {
+  color: #1259c3;
+
+}
+
+.header-button {
+  background-color: transparent;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: black;
+}
+
+footer {
+  padding-top: 40px;
+}
+
+.fa-truck {
+  color: #39b54a;
+  border: solid 1px #39b54a;
+  border-radius: 50%;
+  padding: 23px 10px;
+  margin-top: -25px;
+  align-self: end;
+  margin-right: 40px;
+}
+
+form {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 361px) {
+  .image {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
+  .article-texts {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
+  .descrip {
+    display: block;
+  }
+  .header-menu {
+    display: none;
+  }
+  .login {
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+  }
+  .nav-bar {
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+  }
+}
+/* @media (min-width: 768px) {
+
+} */
