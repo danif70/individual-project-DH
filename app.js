@@ -17,14 +17,17 @@ app.get('/register', (req, res) => {
 });
 
 app.post('/register', (req, res) => {
- console.log(req.body);
- res.send('ok')
+  res.sendFile(path.join(__dirname, '/views/index.html'));
 });
 
 app.get('/login', (req, res) => {
   res.sendFile(path.join(__dirname, '/views/login.html'));
 });
 
-app.listen(3000, () => 
+app.post('/login', (req, res) => {
+  res.sendFile(path.join(__dirname, '/views/index.html'));
+}); 
+
+app.listen(8000, () => 
 console.log('Server up')
 );

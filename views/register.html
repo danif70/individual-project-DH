@@ -16,12 +16,10 @@
 <body>
   <header>
     <div class="header-first">
-      <img src="./images/logo-mercado-liebre.svg" alt="logo de Mercado Liebre" width="300" heigth="300">
+      <img class="logo" src="./images/logo-mercado-liebre.svg" alt="logo de Mercado Liebre">
       <div class="search">
-        <input type="search" placeholder="Buscar productos, marcas">
-        <button>
-          <span class="fa-solid fa-magnifying-glass"></span>
-        </button>
+        <input class="input-search" type="search" placeholder="Buscar productos, marcas">
+        <i class="fa-solid fa-magnifying-glass fa-xs"></i>
       </div>
       <div class="subtitle-header">
         <i class="fa-solid fa-hand-holding-dollar"></i>
@@ -37,59 +35,68 @@
       </ul>
       <ul class="login">
         <div class="list-header">
-          <li><a href="/register">Creá tu cuenta</a></li>
-          <button class="header-button"><i class="fa-regular fa-id-card "></i></button>
+          <li><a href="/register">Creá tu cuenta <i class="fa-regular fa-id-card "></i></a></li>   
         </div>
         <div class="list-header">
-          <li><a href="/login">Ingresá</a></li>
-          <button class="header-button"><i class="fa-solid fa-right-to-bracket "></i></button>
+          <li><a href="/login">Ingresá <i class="fa-solid fa-right-to-bracket "></i></a></li>
         </div>
         <div class="list-header">
-          <li><a href="#">Mis compras</a></li>
-          <button class="header-button"><i class="fa-sharp fa-solid fa-basket-shopping "></i></button>
+          <li><a href="#">Mis compras <i class="fa-sharp fa-solid fa-basket-shopping "></i></a></li>
         </div>
       </ul>
     </div>
     <button class="header-menu">
       <i class="fa-sharp fa-solid fa-bars fa-2xl"></i>
     </button>
-
   </header>
   <main>
     <form action="/register" method="post">
-      <label for="name">Nombre y apellido</label>
-      <input type="text" name="name" id="name">
-      <label for="username">Nombre de usuario</label>
-      <input type="text" name="name" id="name">
-      <label for="email">Email</label>
-      <input type="email" name="email" id="email">
-      <label for="birthdate">Fecha de nacimiento</label>
-      <input type="date" name="birthdate" id="birthdate">
-      <label for="address">Dirección</label>
-      <input type="text" name="address" id="">
+      <h3>Datos del usuario</h3>
+      <div class="personal-data-form">
+        <label for="name">Nombre y apellido</label>
+        <input type="text" name="name" id="name" placeholder="Nombre y apellido" required error oninvalid="this.setCustomValidity('Escribe tu nombre')">
+        <label for="user">Nombre de usuario</label>
+        <input type="text" name="name" id="user" placeholder="Nombre de usuario" required error oninvalid="this.setCustomValidity('Escribe un nombre de usuario')">
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email" placeholder="E-mail" required error oninvalid="this.setCustomValidity('Escribe un email válido')">
+        <label for="birthdate">Fecha de nacimiento</label>
+        <input type="text" name="birthdate" id="birthdate" placeholder="MM/DD/YYYY"
+        onfocus="(this.type='date')" required error oninvalid="this.setCustomValidity('Escribe tu fecha de nacimiento')">
+        <label for="address">Dirección</label>
+        <input type="text" name="address" id="address" placeholder="Dirección" required error oninvalid="this.setCustomValidity('Escribe tu dirección')">
+      </div>
       <h3>Perfil del usuario</h3>
-      <input type="radio" name="profile" id="Comprador" value="Comprador">
-      <label for="profile">Comprador</label>
-      <input type="radio" name="profile" id="Vendedor" value="Vendedor">
-      <label for="profile">Vendedor</label>
+      <div class="data-form">
+        <input type="radio" name="seller" id="Comprador" value="Comprador" required oninvalid="this.setCustomValidity('Escoge una opción')">
+        <label for="seller">Comprador</label>
+        <input type="radio" name="buyer" id="Vendedor" value="Vendedor">
+        <label for="buyer">Vendedor</label>
+      </div>
       <h3>Intereses</h3>
-      <input type="checkbox" id="electro" name="interest" value="electro" />
-      <label for="electro">Electro</label>
-      <input type="checkbox" id="moda" name="interest" value="moda" />
-      <label for="moda">Moda</label>
-      <input type="checkbox" id="hogar" name="interest" value="hogar" />
-      <label for="hogar">Hogar</label>
-      <input type="checkbox" id="jugueteria" name="interest" value="jugueteria" />
-      <label for="jugueteria">Juguetería</label>
-      <input type="checkbox" id="vida sana" name="interest" value="vida sana" />
-      <label for="vida sana">Vida sana</label>
-      <button type="submit">Enviar</button>
+      <div class="interest-data-form">
+        <input type="checkbox" id="electro" name="interest" value="electro" />
+        <label for="electro">Electro</label>
+        <input type="checkbox" id="moda" name="interest" value="moda" />
+        <label for="moda">Moda</label>
+        <input type="checkbox" id="hogar" name="interest" value="hogar" />
+        <label for="hogar">Hogar</label>
+        <input type="checkbox" id="jugueteria" name="interest" value="jugueteria" />
+        <label for="jugueteria">Juguetería</label>
+        <input type="checkbox" id="vida sana" name="interest" value="vida sana" />
+        <label for="vida sana">Vida sana</label>
+      </div>
+     
+      <button class="register-button" type="submit">Enviar</button>
+      <button class="register-button reset" type="reset">Limpiar</button>
+      <button class="register-button back" type="button" onclick="location.href= '/home';" >Volver</button>
+      
     </form>
   </main>
   <footer>
+    <div class="information-footer">
     <article class="footer-information">
       <i class="fa-solid fa-credit-card fa-2xl blue-icon"></i>
-      <h5>
+      <h5 class="footer-title">
         ● Pagá con tarjeta o en efectivo
       </h5>
       <p class="texts">Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en
@@ -98,7 +105,7 @@
     </article>
     <article class="footer-information">
       <i class="fa-solid fa-gift fa-2xl blue-icon"></i>
-      <h5>
+      <h5 class="footer-title">
         ● Envío gratis desde $ 2.500
       </h5>
       <p class="texts">Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de
@@ -107,17 +114,18 @@
     </article>
     <article class="footer-information">
       <i class="fa-solid fa-user-shield fa-2xl blue-icon"></i>
-      <h5>
+      <h5 class="footer-title">
         ● Seguridad, de principio a fin
       </h5>
       <p class="texts">¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer,
         porque estás siempre protegid@.
       </p>
     </article>
+  </div>
     <article>
-      <h5>
+      <p class="copyright">
         ● Copyright © 1999-2020 MercadoLiebre S.R.L.
-      </h5>
+      </p>
     </article>
   </footer>
 
