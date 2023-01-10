@@ -3,6 +3,8 @@ const path = require('path')
 
 const app = express();
 
+const port = process.env.PORT || 3001
+
 const publicPath = path.resolve(__dirname, './public')
 app.use(express.static(publicPath))
 app.use(express.json())
@@ -28,6 +30,6 @@ app.post('/login', (req, res) => {
   res.sendFile(path.join(__dirname, '/views/index.html'));
 }); 
 
-app.listen(8000, () => 
-console.log('Server up')
+app.listen(port, () => 
+console.log(`Server up ${port}`)
 );
