@@ -10,7 +10,7 @@ app.use(express.static(publicPath))
 app.use(express.json())
 app.use(express.urlencoded({extended:true}));
 
-app.get('/home', (req, res) => {
+app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '/views/index.html'));
 });
 
