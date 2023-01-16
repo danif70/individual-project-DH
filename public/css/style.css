@@ -46,6 +46,7 @@ button:hover {
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
+  gap: 14px;
 }
 
 .header-second {
@@ -112,8 +113,13 @@ a:hover {
   box-sizing: border-box;
 }
 
+.product:hover {
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  transition-duration: 0.3s;
+}
+
 .image {
-  width: 95%;
+  width: 85%;
   margin-top: 20px;
 }
 
@@ -124,8 +130,8 @@ a:hover {
   align-items: flex-start;
   justify-content: left;
   background-color: white;
-  width: 95%;
-  margin: 1px 0 20px;
+  width: 85%;
+  margin: 5px 0 20px;
   padding-left: 10px;
   box-sizing: border-box;
 }
@@ -149,8 +155,13 @@ a:hover {
   margin: 5px 0;
 }
 
-.descrip {
+.product >.article-texts >.descrip {
   display: none;
+}
+
+.product:hover > .article-texts >.descrip {
+  display: block;
+  transition-duration: 0.3s;
 }
 
 .texts {
@@ -189,6 +200,7 @@ a:hover {
 
 .footer-information {
   text-align: center;
+  width: 65%;
 }
 
 .blue-icon {
@@ -201,10 +213,14 @@ a:hover {
   border: none;
 }
 
-
-
 footer {
   padding: 40px 60px;
+}
+
+.information-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .fa-truck {
@@ -219,6 +235,7 @@ footer {
 
 .fa-truck:hover {
   transform: rotate(-90deg);
+  transition: 900ms;
 }
 
 form {
@@ -265,23 +282,26 @@ input {
 .register-button {
   margin-top: 20px;
   height: 30px;
-  width: 12%;
+  width: 38%;
   background-color: #1259c3;
   border: none;
   border-radius: 10px;
   color: white;
-  margin-bottom:10px;
+  margin-bottom: 10px;
   font-size: 16px;
 }
+
 .reset {
   background-color: red;
   margin-top: 0;
 }
+
 .reset:hover {
   background-color: white;
   color: red;
 
 }
+
 .login-button:hover {
   background-color: #0022AA;
   color: white;
@@ -292,8 +312,9 @@ input {
   color: black;
   margin-top: 0;
 }
+
 .back:hover {
-  background-color:dimgrey;
+  background-color: dimgrey;
   color: black;
 }
 
@@ -326,14 +347,12 @@ input {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    gap: 10px;
+    padding: 0 20px;
   }
 
   .section-products>* {
     flex: 40%
-  }
-
-  .image {
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
   }
 
   .logo {
@@ -342,20 +361,11 @@ input {
 
   .search {
     width: 24%;
-
   }
 
   .input-search {
     width: 100%;
     height: 36px
-  }
-
-  .article-texts {
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-  }
-
-  .descrip {
-    display: block;
   }
 
   .header-menu {
@@ -377,6 +387,8 @@ input {
 }
 
 @media (min-width: 768px) {
+
+
   .section-products {
     display: flex;
     flex-wrap: nowrap;
@@ -384,5 +396,16 @@ input {
 
   .information-footer {
     display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .login-form {
+    margin: 80px;
+    padding: 80px 0 200px;
+  }
+
+  .register-button {
+    width: 12%;
   }
 }
